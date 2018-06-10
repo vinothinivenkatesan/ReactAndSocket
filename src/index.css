@@ -1,0 +1,750 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: 'Roboto', sans-serif; }
+
+body {
+  line-height: 1;
+  font-family: 'Roboto', sans-serif;
+  color: #262626; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input,
+select {
+  vertical-align: middle; }
+
+.pad0 {
+  padding: 0; }
+
+button.btnnostyle {
+  background: no-repeat;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: inherit; }
+
+.appSidebar,
+.sidetray {
+  position: fixed;
+  left: 0;
+  z-index: 1;
+  background: #fff;
+  width: 400px;
+  top: 0;
+  bottom: 0; }
+  .appSidebar ::-webkit-scrollbar,
+  .sidetray ::-webkit-scrollbar {
+    width: 5px; }
+  .appSidebar ::-webkit-scrollbar-track,
+  .sidetray ::-webkit-scrollbar-track {
+    -webkit-box-shadow: none; }
+  .appSidebar ::-webkit-scrollbar-thumb,
+  .sidetray ::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    outline: none; }
+
+.sidebar-newgroup.active,
+.sidebar-profile.active,
+.sidebar-archived.active,
+.sidebar-stared.active,
+.sidebar-NewChat.active {
+  left: 0;
+  transition-duration: .5s; }
+
+.alpaOrder {
+  float: left;
+  width: 100%;
+  text-align: left; }
+
+.sidetray {
+  z-index: 2;
+  background: #f7f7f7;
+  left: -410px;
+  transition-duration: .5s; }
+  .sidetray > header {
+    background: #00bfa5;
+    height: 100px;
+    padding-right: 20px;
+    padding-left: 25px;
+    float: left;
+    width: 100%;
+    text-align: left; }
+    .sidetray > header > .titles {
+      color: #fff;
+      margin: 58px 0 0 0;
+      font-size: 20px; }
+      .sidetray > header > .titles > span {
+        margin: 0 0 0 20px; }
+  .sidetray .userprofilesection {
+    text-align: center;
+    background: #f7f7f7; }
+    .sidetray .userprofilesection figure {
+      float: left;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 50%;
+      float: none;
+      background: #eee;
+      display: inline-block;
+      margin: 40px 0; }
+      .sidetray .userprofilesection figure > img {
+        width: 100%; }
+
+.namesection {
+  float: left;
+  width: 100%;
+  text-align: left;
+  padding: 20px 20px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background: #fff; }
+  .namesection > label {
+    float: left;
+    width: 100%;
+    text-align: left;
+    color: #00bfa5;
+    font-size: 14px;
+    margin: 0 0 10px 0; }
+  .namesection > span {
+    float: left;
+    width: 100%;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+    font-size: 14px; }
+    .namesection > span > i {
+      float: right;
+      font-size: 16px; }
+
+.nametext {
+  padding: 20px 20px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  float: left;
+  width: 100%;
+  text-align: left;
+  line-height: 20px; }
+
+.sidebarheader {
+  float: left;
+  width: 100%;
+  background: #eee;
+  padding: 10px 16px; }
+  .sidebarheader figure {
+    background: #ccc;
+    float: left;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%; }
+    .sidebarheader figure > img {
+      width: 100%; }
+  .sidebarheader button.btnnostyle {
+    float: left;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%; }
+    .sidebarheader button.btnnostyle > img {
+      width: 100%; }
+
+.sidebarOptions li {
+  float: left;
+  list-style: none;
+  color: #80878a;
+  font-size: 20px;
+  margin: 0px 5px; }
+
+.chatsearch {
+  background: #fbfbfb;
+  padding: 8px 14px;
+  border-bottom: 1px solid #eee;
+  float: left;
+  width: 100%;
+  text-align: left;
+  border-right: 1px solid #eee; }
+  .chatsearch input {
+    float: left;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 9px 7px; }
+
+.chatList,
+.userprofilesection {
+  float: left;
+  width: 100%;
+  text-align: left;
+  border-right: 1px solid #eee;
+  position: fixed;
+  border-right: 1px solid #eee;
+  width: 400px;
+  background: #fff;
+  top: 113px;
+  bottom: 0;
+  overflow: auto; }
+  .chatList ul,
+  .userprofilesection ul {
+    float: left;
+    width: 100%;
+    text-align: left; }
+    .chatList ul > li,
+    .userprofilesection ul > li {
+      float: left;
+      width: 100%;
+      text-align: left;
+      padding: 10px 15px; }
+      .chatList ul > li figure,
+      .userprofilesection ul > li figure {
+        float: left;
+        width: 49px;
+        height: 49px;
+        overflow: hidden;
+        border-radius: 50%;
+        background: #333; }
+        .chatList ul > li figure > img,
+        .userprofilesection ul > li figure > img {
+          width: 100%; }
+  .chatList .chatdetail,
+  .userprofilesection .chatdetail {
+    float: right;
+    width: calc(100% - 65px);
+    padding: 3px 0 15px 0;
+    border-bottom: 1px solid #efefef; }
+  .chatList label.chaterName,
+  .userprofilesection label.chaterName {
+    float: left;
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    margin: 5px 0 5px 0; }
+    .chatList label.chaterName > span,
+    .userprofilesection label.chaterName > span {
+      color: rgba(0, 0, 0, 0.6);
+      float: right;
+      font-size: 13px; }
+  .chatList .chaterMessge,
+  .userprofilesection .chaterMessge {
+    float: left;
+    width: 100%;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 13px; }
+    .chatList .chaterMessge > .chatalert,
+    .userprofilesection .chaterMessge > .chatalert {
+      background: #09d261;
+      color: #fff;
+      float: right;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      text-align: center;
+      padding: 1px 0; }
+
+/*add Group*/
+.alphavalue {
+  float: left;
+  width: 100%;
+  text-align: left;
+  padding: 20px 30px;
+  color: #00bfa5; }
+
+.usernewgroupsection {
+  float: left;
+  width: 100%;
+  text-align: left; }
+
+input.searchName {
+  border: none;
+  border-bottom: 1px solid #dedede;
+  width: 93%;
+  float: right;
+  padding: 10px 0; }
+  input.searchName:focus {
+    outline: none; }
+
+/*Archived*/
+.archivedlabel {
+  float: right;
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #ccc;
+  padding: 4px;
+  font-size: 11px;
+  border-radius: 3px; }
+
+/*stared*/
+.staredList {
+  float: left;
+  width: 100%;
+  text-align: left; }
+  .staredList > li {
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding: 10px 10px; }
+    .staredList > li .chatProf {
+      float: left;
+      width: 30px;
+      height: 30px;
+      overflow: hidden;
+      border-radius: 50%;
+      float: left;
+      background: #ccc; }
+      .staredList > li .chatProf > img {
+        width: 100%; }
+    .staredList > li label.senderName {
+      font-size: 13px;
+      padding: 0 4px 6px 4px;
+      float: left;
+      width: 100%;
+      text-align: left; }
+
+.rightchatdetail {
+  float: right;
+  width: calc(100% - 40px); }
+
+.contentdetail {
+  background: #fff;
+  padding: 6px 7px 8px 9px;
+  border-radius: 7.5px;
+  box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+  color: #262626;
+  float: left;
+  width: calc(100% - 15px); }
+  .contentdetail .dropdown {
+    width: 10px;
+    float: right; }
+
+.mesagecontent {
+  float: left;
+  width: 90%; }
+
+.chatdate {
+  float: right;
+  color: rgba(0, 0, 0, 0.6); }
+
+.chattimestamp {
+  float: left;
+  width: 100%;
+  text-align: left; }
+  .chattimestamp > span {
+    float: right;
+    font-size: 11px;
+    margin: 5px 0 0 0;
+    color: rgba(0, 0, 0, 0.6); }
+
+.appContent {
+  background: #f7f9fa;
+  border-bottom: 5px solid #09d261;
+  float: right;
+  width: calc(100% - 400px); }
+
+.contentholder {
+  width: 450px;
+  padding: 70px 0 20px 0;
+  text-align: center;
+  margin: 0 auto; }
+
+.appaddcontent > h1 {
+  font-size: 26px;
+  margin: 40px 0 20px 0; }
+.appaddcontent > p {
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 20px; }
+
+.chatheader {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  background: #eee;
+  float: right;
+  width: calc(100% - 400px);
+  border-left: 1px solid #e4e0e0;
+  padding: 10px 20px; }
+  .chatheader > figure {
+    background: #ccc;
+    float: left;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%; }
+    .chatheader > figure > img {
+      width: 100%; }
+  .chatheader button.btnnostyle {
+    padding: 10px 10px; }
+
+.chatbody {
+  float: right;
+  width: calc(100% - 400px);
+  position: fixed;
+  top: 60px;
+  overflow: auto;
+  padding: 20px 0;
+  background: #e5ddd5;
+  bottom: 60px; }
+
+.chatfooter {
+  float: right;
+  width: calc(100% - 400px);
+  position: fixed;
+  bottom: 0;
+  padding: 10px 20px;
+  height: 60px;
+  background: #f5f1ee; }
+
+.userstatus {
+  float: left;
+  margin: 0 0 0 10px; }
+  .userstatus > label {
+    float: left;
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    margin: 6px 0 4px 0; }
+  .userstatus > span {
+    float: left;
+    width: 100%;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px; }
+
+.emoji {
+  float: left;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 27px;
+  margin: 8px 10px 0 0; }
+
+.inputtextfield {
+  float: left;
+  width: 92%; }
+  .inputtextfield input {
+    border: none;
+    width: 100%;
+    padding: 10px 18px;
+    border: 1px solid #e5ddd5;
+    border-radius: 5px; }
+
+.mic {
+  float: left;
+  color: rgba(0, 0, 0, 0.6);
+    font-size: 30px;
+    margin: 0px 0 0 15px;
+    cursor:pointer; }
+
+.chateddate {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6); }
+  .chateddate > span {
+    background-color: rgba(225, 245, 254, 0.92);
+    border-radius: 7.5px;
+    box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+    padding: 5px 12px 6px 12px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); }
+
+.messagelist {
+  float: left;
+  width: 100%;
+  text-align: left; }
+  .messagelist > li {
+    float: left;
+    width: 100%;
+    text-align: left;
+    list-style: none;
+    padding: 0 90px 5px 90px; }
+    .messagelist > li.clienmesg .contxtHolder {
+      float: right;
+      background: #dcf8c6; }
+      .messagelist > li.clienmesg .contxtHolder .dropdown {
+        background: #dcf8c6; }
+      .messagelist > li.clienmesg .contxtHolder:after {
+        float: right;
+        color: #dcf8c6;
+        position: absolute;
+        right: -27px;
+        top: 10px; }
+    .messagelist > li .contxtHolder {
+      padding: 11px 11px 10px 12px;
+      color: #262626;
+      font-size: 14px;
+      background: #fff;
+      border-radius: 7.5px;
+      float: left;
+      position: relative;
+      box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13); }
+      .messagelist > li .contxtHolder .contxt {
+        width: 90%; }
+      .messagelist > li .contxtHolder .mesreciveddate {
+        float: right;
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.6);
+        margin: 10px 0 0 40px; }
+      .messagelist > li .contxtHolder .dropdown {
+        right: 7px;
+        position: absolute;
+        top: 5px;
+        font-size: 26px;
+        background: #ffffff;
+        padding: 0 6px;
+        opacity: 0; }
+      .messagelist > li .contxtHolder:hover .dropdown {
+        opacity: 1; }
+
+.web-container {
+  width: 100%;
+  margin: 0; }
+
+/*# sourceMappingURL=main.css.map */
+
+.sidebarheader > .user{
+  padding-top:15px;
+  padding-left:15px;
+}
+
+.sidebarheader > .status{
+  padding-top:15px;
+  padding-left:15px;
+  font-style: italic;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 12% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #09d261;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #09d261;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #09d261;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+
+body {
+  background: #09d261; /* fallback for old browsers */
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
